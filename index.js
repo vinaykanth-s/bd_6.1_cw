@@ -1,7 +1,13 @@
 const express = require('express');
+var cors = require('cors')
 const app = express();
 const port = 3010;
 app.use(express.json());
+app.use(cors())
+
+
+
+app.use(cors())
 
 app.get('/api/books', (req, res) => {
   res.json(getBooks());
