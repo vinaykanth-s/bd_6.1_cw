@@ -1,4 +1,4 @@
-let {getBooks, getBookById, addBooks} = require('./book')
+let {getBooks, getBookById, addBook} = require('./book')
 const express = require('express');
 var cors = require('cors')
 const app = express();
@@ -22,7 +22,7 @@ app.get('/api/books/:id', (req, res) => {
 });
 
 app.post('/api/books', (req, res) => {
-  const book = addBooks(req.body);
+  const book = addBook(req.body);
   res.status(201).json(book);
 });
 
