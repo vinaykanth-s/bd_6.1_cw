@@ -6,10 +6,6 @@ const port = 3010;
 app.use(express.json());
 app.use(cors())
 
-
-
-app.use(cors())
-
 app.get('/api/books', (req, res) => {
   res.json(getBooks());
 });
@@ -33,3 +29,5 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`BD6.1 CW listening at http://localhost:${port}`);
 });
+
+module.exports = app
